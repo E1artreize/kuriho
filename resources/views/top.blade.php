@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166942709-5"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-166942709-5');
+        </script>
         <meta charset="utf-8">
+        <meta name="description" content="和栗モンブラン専門店。最高級和栗を惜しみなくペーストにして仕上げたこだわりの逸品。栗農家さんが15年という年月をかけて導き出した栗本来の味を堪能してください。">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:url" content="https://kuriho.com/" >
+        <meta property="og:type" content=" website">
+        <meta property="og:title" content="栗歩 -KURIHO-">
+        <meta property="og:description" content="和栗モンブラン専門店。栗農家さんが15年という年月をかけて導き出した栗本来の味を堪能してください。">
+        <meta property="og:site_name" content="栗歩 -KURIHO-">
+        <meta property="og:image" content="{{asset('images/ATE.png')}}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
         <link rel="stylesheet" href="{{asset('style.css')}}">   
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">     
-        <title>和栗モンブラン専門店 -栗歩-</title>
+        <title>栗歩 -KURIHO-</title>
+        <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
     </head>
     <body>
         <section class="header-menu">
-            <p>testtesttest</p>
+            <ul>
+                <li><a href=#about>栗歩について</a></li>
+                <li><a href=#menu>お品書き</a></li>
+                <li><a href="#shops">店舗情報</a></li>
+                <li><a href="https://www.instagram.com/waguri_montblanc_kuriho" target="blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
         </section>
         <section class="first-view">
-            <h1>和栗モンブラン専門店 -栗歩-</h1>
-            <div class="fv-content">
+            <h1 class="fadein">和栗モンブラン専門店 -栗歩-</h1>
+            <div class="fv-content fadein">
                 <img src="images/栗歩ロゴ.png">
                 <div class="fv-menu">
                     <ul class="menu-items">
                     <li><a href=#about>栗歩について</a></li>
                     <li><a href=#menu>お品書き</a></li>
-                    <li><a href="">店舗情報</a></li>
+                    <li><a href="#shops">店舗情報</a></li>
                     <li><a href="https://www.instagram.com/waguri_montblanc_kuriho" target="blank"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 <div>
@@ -28,9 +50,9 @@
         </section>
         <section class="about" id="about">
             <div class="about-header">
-                <h2>能登・松尾栗園がこだわり抜いた<br>究極の味。</h2>
-                <div class="about-header-content">
-                    <img src="images/about-image.png">
+                <h2 class="appear">能登・松尾栗園がこだわり抜いた<br>究極の味。</h2>
+                <div class="about-header-content fadeup">
+                    <img src="images/about-image.png" >
                     <p>石川県の栗農家「松尾栗園」の最高級和栗をじっくりと熟成させた後焼き、ペーストにして使用。<br>
                         妥協のない選果に加え、作業場の温度・湿度管理にも細かく気を遣い、無糖ながら栗本来の甘みや香りを最大限に引き出しています。 <br>
                         徹底したこだわりが生んだ「能登栗の無糖プレミアムモンブラン」をお楽しみください。
@@ -39,14 +61,14 @@
                 <img class="bar" src="images/about-bar.png">
             </div>
             <div class="about-detail">
-                <div class="jukusei">
+                <div class="jukusei fadeup2">
                     <h2><span>熟成</span><img src="images/hisigata.png"></h2>
                     <div class="jukusei-content">
                         <p class="content-head">１５年かけて導き出した”奇跡の１０日間”</p>
                         <p class="content-description">採れたての栗は糖度１０ほどしかありませんが、マイナス１℃で４５日間熟成させることにより、糖度２０を超えるほど甘味が増します。 これは栗農家・松尾さんが自身で温度・風の強さなどの条件を変えながら糖度を図り、１５年かけて導き出した熟成期間なのです。 さらに糖度が一番高い熟成期間は１０日間しかなく、松尾さんはこれを「奇跡の１０日間」 と呼んでいます。 </p>
                     </div>
                 </div>
-                <div class="yakiguri">
+                <div class="yakiguri fadeup2">
                     <div class="yakiguri-content">
                     <p class="content-head">無糖で驚きの甘さを実現</p>
                     <p class="content-description">熟成された栗を焼き栗窯で焼き栗にします。 加圧量や加熱温度、加熱時間などもこだわりがあり、その条件で焼いた栗は糖度３０を超えるほどまで甘くなります。 その焼き立ての焼き栗は驚くほど美味しく、甘み、香りがとてつもなく引き立ちます。 </p>
@@ -55,14 +77,14 @@
                 </div>
             </div>
             <div class="about-detail-sp">
-                <div class="feature">
+                <div class="feature fadeup2">
                     <div class="title">
                         <h2><span>熟成</span><img src="images/hisigata.png"></h2>
                         <p class="content-head">15年かけて導き出した<br>”奇跡の10日間”</p>
                     </div> 
                     <p class="content-description">採れたての栗は糖度10ほどしかありませんが、マイナス1℃で45日間熟成させることにより、糖度20を超えるほど甘味が増します。 これは栗農家・松尾さんが自身で温度・風の強さなどの条件を変えながら糖度を図り、15年かけて導き出した熟成期間なのです。 さらに糖度が一番高い熟成期間は10日間しかなく、松尾さんはこれを「奇跡の10日間」 と呼んでいます。</p>
                 </div>
-                <div class="feature">
+                <div class="feature fadeup2">
                     <div class="title">
                         <h2><span>焼き栗</span><img src="images/hisigata.png"></h2>
                         <p class="content-head">無糖で驚きの甘さを実現</p>
@@ -73,7 +95,7 @@
         </section>
         <section class="menu" id="menu">
             <div class="menu-box">
-                <h2>お品書き<span class="english">Items</span><br><span class="sub">※価格は税抜きです。</span></h2>
+                <h2 class="appear">お品書き<span class="english">Items</span><br><span class="sub">※価格は税抜きです。</span></h2>
                 <div class="menu-content">
                     <ul class="items">
                         <li><small>砂糖不使用</small><br><span class="item-box"><span class="name">熟成無糖モンブラン</span><span class="price">2200yen</span></span></li>
@@ -85,12 +107,12 @@
                 </div>
             </div>
         </section>
-        <section class="shops">
+        <section class="shops" id="shops">
             <div class="shops-title">
-                <h2><span class="english">Shops</span><br>店舗情報</h2>
+                <h2 class="appear"><span class="english">Shops</span><br>店舗情報</h2>
             </div>
             <div class="shops-content">
-                <div class="shop-item">
+                <div class="shop-item fadeup2">
                     <img src="images/shop-jiyugaoka-image.png">
                     <div class="shop-text">
                         <h3 class="shop-title">自由が丘店</h3>
@@ -107,7 +129,7 @@
         </section>
         <section class="footer">
             <div class="footer-content">
-                <img src="images/栗歩ロゴ.png">
+                <a href="/"><img src="images/栗歩ロゴ.png"></a>
                 <div class="footer-information">
                     <p>完全予約制／ご予約はお電話でのみ承っております。</p>
                     <p class="phone"><i class="fas fa-phone"></i>03-6459-5535</p>

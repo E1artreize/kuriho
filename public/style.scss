@@ -12,6 +12,29 @@ html{
     position:fixed;
     z-index:5;
     display:none;
+    ul{
+        display:flex;
+        width:80%;
+        margin:auto;
+        margin-top:18px;
+        padding:0;
+        justify-content:space-around;
+        align-items:center;
+        li{
+            font-size:16px;
+            letter-spacing:0.1em;
+            transition:0.2s;
+            a{
+                color:#fff;
+            }
+        }
+        li:last-child{
+            font-size:24px;
+        }
+        li:hover{
+            opacity:0.6;
+        }
+    }
 }
 .header-menu.show{
     display:block;
@@ -19,14 +42,16 @@ html{
 
 .first-view{
     background-image:url(images/fv-image.png);
-    background-size:cover;
+    background-size:100% auto;
     background-attachment:fixed;
     height:50vw;
+    box-sizing: border-box;
     padding-top:20px;
     h1{
         font-size:20px;
         text-align:center;
         color:#fff;
+        display:none;
     }
     .fv-content{
         width:40%;
@@ -34,21 +59,23 @@ html{
         text-align:center;
         display:none;
         img{
-            width:200px;
+            width:15.6vw;
             height:auto;
-            margin-bottom:20px;
+            margin-bottom:1.6vw;
         }
         .fv-menu{
             background-color:rgba(255,255,255,0.8);
-            padding:40px 60px;
+            padding:1.8vw 60px;
             .menu-items{
                 border-top:solid 1px #707070;
                 border-bottom:solid 1px #707070;
-                padding:16px 0;
+                padding:10px 0;
                 text-align:center;
                 li{
                     font-size:20px;
-                    margin-bottom:24px;
+                    margin-bottom:16px;
+                    transition:0.2s;
+                    letter-spacing:0.1em;
                     a{
                         color:#301408;
                     }
@@ -59,12 +86,32 @@ html{
                 li:last-child{
                     margin-bottom:0;
                 }
+                li:hover{
+                    opacity:0.6;
+                }
             }
         }
     }
 }
 
 //responsive
+@media screen and (max-width:1000px){
+    .first-view{
+        .fv-content{
+            img{
+                width:15.6vw;
+            }
+            .fv-menu{
+                .menu-items{
+                    li{
+                        font-size:18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and(max-width:480px){
     .first-view{
         background-image:url(images/fv-image-sp.jpeg);
@@ -78,7 +125,7 @@ html{
         .fv-content{
             width:100%;
             margin:0;
-            display:flex;
+            display:none;
             justify-content: space-between;
             align-items:center;
             margin-top:20px;
@@ -88,7 +135,7 @@ html{
             }
             .fv-menu{
                 background-color:transparent;
-                padding:0 20px;
+                padding:0 12px;
                 .menu-items{
                     border:none;
                     padding:0;
@@ -243,6 +290,43 @@ html{
 }
 
 //responsive
+@media screen and (max-width:1000px){
+    .about{
+        .about-header{
+            h2{
+                font-size:28px;
+                margin-left:26vw;
+                line-height:1.4em;
+                br{
+                    display: block;
+                }
+            }
+            .about-header-content{
+                p{
+                    font-size:14px;
+                    line-height:2.2em;
+                }
+            }
+        }
+        .about-detail{
+            .jukusei{
+                .jukusei-content{
+                    .content-head{
+                        font-size:20px;
+                    }
+                }
+            }
+            .yakiguri{
+                .yakiguri-content{
+                    .content-head{
+                        font-size:20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and(max-width:480px){
     .about{
         .about-header{
@@ -254,9 +338,7 @@ html{
                 margin-left:0;
                 margin-bottom:20px;
                 line-height:1.6em;
-                br{
-                    display: block;
-                }
+                
             }
             .about-header-content{
                 display:block;
@@ -338,6 +420,7 @@ html{
         h2{
             color:#3D2902;
             font-size:36px;
+            letter-spacing:0.12em;
             font-weight:bold;
             margin-bottom:20px;
             .english{
@@ -346,6 +429,7 @@ html{
             }
             .sub{
                 font-size:14px;
+                letter-spacing:0.2px;
                 margin-left:60px;
             }
             br{
@@ -391,6 +475,30 @@ html{
 }
 
 //responsive
+@media screen and (max-width:1000px){
+    .menu{
+        .menu-box{
+            h2{
+                font-size:28px;
+            }
+            .menu-content{
+                .items{
+                    li{
+                        font-size:20px;
+                        .item-box{
+                            width:320px;
+                        }
+                    }
+                }
+                .menu-image{
+                    img{
+                        width:240px;
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and(max-width:480px){
     .menu{
         padding:60px 12px;
@@ -452,6 +560,7 @@ html{
         h2{
             width:100%;
             font-size:36px;
+            letter-spacing:0.12em;
             padding-right:4vw;
             line-height:1.6em;
             color:#fff;
@@ -499,13 +608,21 @@ html{
 
 }
 //responsive
+@media screen and (max-width:1000px){
+    .shops{
+        .shops-title{
+            h2{
+                font-size:28px;
+            }
+        }
+    }
+}
 @media screen and(max-width:480px){
     .shops{
         .shops-title{
             h2{
                 font-size:24px;
                 padding-right:24px;
-                letter-spacing:0.12em;
                 line-height:1.2em;
                 color:#fff;
                 text-align:right;
@@ -555,11 +672,15 @@ html{
             p{
                 color:#fff;
                 margin-bottom:20px;
+                line-height:1.4em;
             }
             .phone{
                 font-size:24px;
                 letter-spacing:0.1em;
                 margin-bottom:32px;
+                a{
+                    color:#fff;
+                }
                 i{
                     margin-right:12px;
                 }
@@ -571,6 +692,7 @@ html{
                 padding:8px 20px;
                 color:#fff;
                 font-size:16px;
+                transition:0.4s;
                 a{
                     position:absolute;
                     width:100%;
@@ -581,6 +703,9 @@ html{
                 i{
                     margin-right:12px;
                 }
+            }
+            .instagram:hover{
+                background-color:#2D2D2D;
             }
         }
     }

@@ -16,15 +16,51 @@ html a {
   display: none;
 }
 
+.header-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 18px;
+  padding: 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-menu ul li {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.header-menu ul li a {
+  color: #fff;
+}
+
+.header-menu ul li:last-child {
+  font-size: 24px;
+}
+
+.header-menu ul li:hover {
+  opacity: 0.6;
+}
+
 .header-menu.show {
   display: block;
 }
 
 .first-view {
   background-image: url(images/fv-image.png);
-  background-size: cover;
+  background-size: 100% auto;
   background-attachment: fixed;
   height: 50vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-top: 20px;
 }
 
@@ -32,6 +68,7 @@ html a {
   font-size: 20px;
   text-align: center;
   color: #fff;
+  display: none;
 }
 
 .first-view .fv-content {
@@ -42,26 +79,29 @@ html a {
 }
 
 .first-view .fv-content img {
-  width: 200px;
+  width: 15.6vw;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 1.6vw;
 }
 
 .first-view .fv-content .fv-menu {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 40px 60px;
+  padding: 1.8vw 60px;
 }
 
 .first-view .fv-content .fv-menu .menu-items {
   border-top: solid 1px #707070;
   border-bottom: solid 1px #707070;
-  padding: 16px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
 .first-view .fv-content .fv-menu .menu-items li {
   font-size: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  letter-spacing: 0.1em;
 }
 
 .first-view .fv-content .fv-menu .menu-items li a {
@@ -74,6 +114,19 @@ html a {
 
 .first-view .fv-content .fv-menu .menu-items li:last-child {
   margin-bottom: 0;
+}
+
+.first-view .fv-content .fv-menu .menu-items li:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 1000px) {
+  .first-view .fv-content img {
+    width: 15.6vw;
+  }
+  .first-view .fv-content .fv-menu .menu-items li {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -91,9 +144,7 @@ html a {
   .first-view .fv-content {
     width: 100%;
     margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -108,7 +159,7 @@ html a {
   }
   .first-view .fv-content .fv-menu {
     background-color: transparent;
-    padding: 0 20px;
+    padding: 0 12px;
   }
   .first-view .fv-content .fv-menu .menu-items {
     border: none;
@@ -287,6 +338,27 @@ html a {
   display: none;
 }
 
+@media screen and (max-width: 1000px) {
+  .about .about-header h2 {
+    font-size: 28px;
+    margin-left: 26vw;
+    line-height: 1.4em;
+  }
+  .about .about-header h2 br {
+    display: block;
+  }
+  .about .about-header .about-header-content p {
+    font-size: 14px;
+    line-height: 2.2em;
+  }
+  .about .about-detail .jukusei .jukusei-content .content-head {
+    font-size: 20px;
+  }
+  .about .about-detail .yakiguri .yakiguri-content .content-head {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .about .about-header {
     position: relative;
@@ -298,9 +370,6 @@ html a {
     margin-left: 0;
     margin-bottom: 20px;
     line-height: 1.6em;
-  }
-  .about .about-header h2 br {
-    display: block;
   }
   .about .about-header .about-header-content {
     display: block;
@@ -385,6 +454,7 @@ html a {
 .menu .menu-box h2 {
   color: #3D2902;
   font-size: 36px;
+  letter-spacing: 0.12em;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -396,6 +466,7 @@ html a {
 
 .menu .menu-box h2 .sub {
   font-size: 14px;
+  letter-spacing: 0.2px;
   margin-left: 60px;
 }
 
@@ -451,6 +522,21 @@ html a {
   font-size: 14px;
   font-weight: bold;
   color: #522400;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu .menu-box h2 {
+    font-size: 28px;
+  }
+  .menu .menu-box .menu-content .items li {
+    font-size: 20px;
+  }
+  .menu .menu-box .menu-content .items li .item-box {
+    width: 320px;
+  }
+  .menu .menu-box .menu-content .menu-image img {
+    width: 240px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -519,6 +605,7 @@ html a {
 .shops .shops-title h2 {
   width: 100%;
   font-size: 36px;
+  letter-spacing: 0.12em;
   padding-right: 4vw;
   line-height: 1.6em;
   color: #fff;
@@ -576,11 +663,16 @@ html a {
   height: 240px;
 }
 
+@media screen and (max-width: 1000px) {
+  .shops .shops-title h2 {
+    font-size: 28px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .shops .shops-title h2 {
     font-size: 24px;
     padding-right: 24px;
-    letter-spacing: 0.12em;
     line-height: 1.2em;
     color: #fff;
     text-align: right;
@@ -637,12 +729,17 @@ html a {
 .footer .footer-content .footer-information p {
   color: #fff;
   margin-bottom: 20px;
+  line-height: 1.4em;
 }
 
 .footer .footer-content .footer-information .phone {
   font-size: 24px;
   letter-spacing: 0.1em;
   margin-bottom: 32px;
+}
+
+.footer .footer-content .footer-information .phone a {
+  color: #fff;
 }
 
 .footer .footer-content .footer-information .phone i {
@@ -656,6 +753,8 @@ html a {
   padding: 8px 20px;
   color: #fff;
   font-size: 16px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .footer .footer-content .footer-information .instagram a {
@@ -668,6 +767,10 @@ html a {
 
 .footer .footer-content .footer-information .instagram i {
   margin-right: 12px;
+}
+
+.footer .footer-content .footer-information .instagram:hover {
+  background-color: #2D2D2D;
 }
 
 .footer small {
